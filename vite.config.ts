@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react';
 // En desarrollo local (npm run dev) esto no afecta nada.
 const NOMBRE_DEL_REPO = 'ferreteria-basica';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: import.meta.env.PROD ? `/${NOMBRE_DEL_REPO}/` : '/',
-});
+  base: mode === 'production' ? `/${NOMBRE_DEL_REPO}/` : '/',
+}));

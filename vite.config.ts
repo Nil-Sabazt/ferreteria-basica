@@ -9,7 +9,7 @@ import react from '@vitejs/plugin-react';
 // para que las rutas de CSS/JS no salgan rotas (la causa #1 de la típica
 // "pantalla en blanco" al desplegar Vite en GitHub Pages).
 // En desarrollo local (npm run dev) esto no afecta nada.
-const NOMBRE_DEL_REPO = 'ferreteria-basico';
+const NOMBRE_DEL_REPO = 'ferreteria-basica';
 
 export default defineConfig({
   plugins: [react()],

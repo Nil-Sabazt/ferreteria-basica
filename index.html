@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferretería El Yunque</title>
     <meta name="description" content="Herramientas y materiales de construcción." />
-    <script type="module" crossorigin src="/ferreteria-basica/assets/index-WxSA93ye.js"></script>
+    <script type="module" crossorigin src="/ferreteria-basica/assets/index-xAfHbftx.js"></script>
     <link rel="stylesheet" crossorigin href="/ferreteria-basica/assets/index-WNgOwIW7.css">
   </head>
   <body>
     <div id="root"></div>
+    <!-- Diagnostic fallback: if the SPA doesn't initialize within 3s, show a visible message -->
+    <script>
+      // Preemptive visible fallback for debugging deployment issues
+      window.__app_loaded = false;
+      setTimeout(() => {
+        if (!window.__app_loaded) {
+          const root = document.getElementById('root');
+          if (root) {
+            root.innerHTML = '<div style="padding:1.5rem;background:#fff;border:1px solid #e0e0e0;font-family:sans-serif"><strong>Error:</strong> la aplicación no cargó correctamente. Abre DevTools → Console para ver errores.</div>';
+          }
+        }
+      }, 3000);
+    </script>
   </body>
 </html>

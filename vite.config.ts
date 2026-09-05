@@ -13,5 +13,5 @@ const NOMBRE_DEL_REPO = 'ferreteria-basica';
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? `/${NOMBRE_DEL_REPO}/` : '/',
+  base: import.meta.env.PROD ? `/${NOMBRE_DEL_REPO}/` : '/',
 });
